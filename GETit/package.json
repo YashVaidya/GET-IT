@@ -1,0 +1,60 @@
+{
+  "name": "GETit",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "firebase": "^5.0.3",
+    "react": "16.6.3",
+    "react-native": "^0.58.6",
+    "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera.git",
+    "react-native-collapsible": "^1.4.0",
+    "react-native-communications": "^2.2.1",
+    "react-native-dropdownalert": "^3.10.0",
+    "react-native-elements": "^1.1.0",
+    "react-native-geocoding": "^0.3.0",
+    "react-native-gesture-handler": "^1.0.15",
+    "react-native-get-location": "^1.1.2",
+    "react-native-google-signin": "^1.1.0",
+    "react-native-image-picker": "^0.28.0",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-paper": "^2.11.0",
+    "react-native-phone-call": "^1.0.9",
+    "react-native-popup-dialog": "^0.17.0",
+    "react-native-push-notification": "^3.1.2",
+    "react-native-push-notification-popup": "^1.2.0",
+    "react-native-qrcode-scanner": "^1.1.2",
+    "react-native-swipe-gestures": "^1.0.3",
+    "react-native-vector-icons": "^6.2.0",
+    "react-native-webview": "^5.3.1",
+    "react-navigation": "^3.2.1",
+    "rn-fetch-blob": "^0.10.15"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "detox": "^12.3.0",
+    "jest": "^24.7.1",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/GETit.app",
+        "build": "xcodebuild -project ios/GETit.xcodeproj -scheme GETit -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone X"
+      }
+    },
+    "test-runner": "jest",
+    "specs": ""
+  }
+}
